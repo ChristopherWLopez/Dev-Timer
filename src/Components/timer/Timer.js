@@ -7,6 +7,7 @@ const Timer = () => {
     const [isRunning, setIsRunning]=useState(false);
     const [mode, setMode]= useState("work");
 
+    
     useEffect(()=>{
 
         let interval;
