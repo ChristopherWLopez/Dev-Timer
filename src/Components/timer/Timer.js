@@ -1,3 +1,4 @@
+import { ClassNames } from '@emotion/react';
 import React, { useState, useEffect } from 'react'
 
 
@@ -7,7 +8,7 @@ const Timer = () => {
     const [isRunning, setIsRunning]=useState(false);
     const [mode, setMode]= useState("work");
 
-    
+
     useEffect(()=>{
 
         let interval;
@@ -27,11 +28,31 @@ const Timer = () => {
         }
         return ()=> clearInterval(interval);
     } ,[isRunning, timeRemaining, mode]);
+
+    const startTime =()=>{
+        setIsRunning(true);
+    }
+
+    const pauseTimer=()=>{
+        setIsRunning(false); 
+       }
+
+    const resetTimer=>{
+        setIsRunning(false);
+        setMode("work");
+        setTimeRemaining(25*60);
+    }
   return (
-    <>
-        
-    </>
+        <div ClassName="Pomodoro">
+            <div ClassName ="Timer">
+                {Math.floor(timeRemaining/60)}:{(timeRemaining%60).toString().padStart(2,"0")}
+            <div/>   
+            <div className="mode>{mode === "work" ? "Work" : "Break"}</div>
+            <button onClick={startTimer}>Start</button>
+        </div>
+        {timeRemaining}
+
   );
-}
+
 
 export default Timer
