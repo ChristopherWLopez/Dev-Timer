@@ -7,10 +7,10 @@ const Footer = () => {
       <Typography
         sx={{
           mt: 4,
-          
+          letterSpacing: ".1rem",
         }}
       >
-      &#169;App Buddy 
+      &#169;Christoper Lopez Industries 
       </Typography>
     </div>
   )
