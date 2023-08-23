@@ -1,3 +1,4 @@
+import { Button, Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react'
 
 
@@ -43,13 +44,33 @@ import React, { useState, useEffect } from 'react'
     }
   return (
         <div className="pomodoro">
+            <Typography 
+                sx={{
+                    mt:2,
+                    mb:3,
+                    fontFamily:"monospace",
+                    fontSize: "8em"
+                }}>
           <div className="timer">
             {Math.floor(timeRemaining / 60)}:{(timeRemaining % 60).toString().padStart(2, "0")}
+                
           </div>
           <div className="mode">{mode === "work" ? "Work" : "Break"}</div>
-          <button onClick={startTime}>Start</button>
-          <button onClick={pauseTimer}>Pause</button>
-          <button onClick={resetTimer}>Reset</button>
+            </Typography>
+
+          <Button 
+            variant="contained"
+            onClick={startTime}
+            >Start</Button>
+
+          <Button variant="contained" 
+            onClick={pauseTimer}
+            >Pause</Button>
+          <Button
+            variant="contained"
+            onClick={resetTimer}s
+            >Reset</Button>
+
         </div>
   );
  }

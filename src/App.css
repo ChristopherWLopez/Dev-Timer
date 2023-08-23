@@ -1,10 +1,12 @@
 .App {
   text-align: center;
-  background-color: #3570e7;
+  background-color: #072051;
 }
 
 
-
+.pomodoro{
+  color: rgb(226, 237, 238);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
