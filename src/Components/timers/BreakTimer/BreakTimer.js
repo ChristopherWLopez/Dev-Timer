@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import React, { useEffect, useState} from "react";
 
 
@@ -46,9 +47,16 @@ const BreakTimer = () => {
     }
 
   return (
-    <div>
-      
-    </div>
+    <>
+        <div className="codeTimer">   
+           <div className="timer">
+            {Math.floor( timeRemaining/60 )}:{(timeRemaining%60).toString().padStart(2,"0")}
+           </div>
+
+           <div className="mode">{mode==="work"? "Work":"Break"}</div>
+           
+        </div>
+    </>
   )
 }
 
