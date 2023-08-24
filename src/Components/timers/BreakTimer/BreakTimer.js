@@ -21,13 +21,29 @@ const BreakTimer = () => {
         } else if(timeRemaining===0){
             if(mode==="code"){
                 setMode("break");
-                setTimeRemaining(10*60);
+                setTimeRemaining(60*60);
             }else{
-                setMode("work");
-                setTimeRemaining("10")
+                setMode("code");
+                setTimeRemaining(60*60);
             }
         }
-    })
+        return ()=> clearInterval(timeInterval);
+    }, [isRunning, timeRemaining, mode]);
+
+
+    const startTime=()=>{
+        setIsRunning(true);
+    }
+
+    const pauseTimer=()=>{
+        setIsRunning(false);
+    }
+    
+    const resetTimer=()=>{
+        setIsRunning(false);
+        setMode("code");
+        setTimeRemaining(60*60);
+    }
 
   return (
     <div>
