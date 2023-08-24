@@ -69,12 +69,9 @@ import React, { useState, useEffect } from 'react'
             >Pause</Button>
           <Button
             variant="contained"
-            onClick={resetTimer}s
+            onClick={resetTimer}
             >Reset</Button>
 
-        </div>
-        <div>
-                
         </div>
         </>
   );

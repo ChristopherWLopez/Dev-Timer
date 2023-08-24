@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import React, { useEffect, useState} from "react";
 
 
@@ -6,7 +6,7 @@ const BreakTimer = () => {
 
     
 
-    const [ timeRemaining, setTimeRemaining ] = useState(10*60);
+    const [ timeRemaining, setTimeRemaining ] = useState(60*60);
     const [isRunning, setIsRunning] = useState(false);
     const [mode, setMode] = useState("code");
 
@@ -15,9 +15,9 @@ const BreakTimer = () => {
         let timeInterval;
 
         if(isRunning && timeRemaining > 0){
-            timeInterval = setTimeRemaining(()=>{
 
-                setIsRunning(prevTime = prevTime -1);
+            timeInterval = setInterval(()=>{
+                setTimeRemaining(prevTime => prevTime -1);
             },1000);
         } else if(timeRemaining===0){
             if(mode==="code"){
@@ -49,13 +49,31 @@ const BreakTimer = () => {
   return (
     <>
         <div className="codeTimer">   
-           <div className="timer">
-            {Math.floor( timeRemaining/60 )}:{(timeRemaining%60).toString().padStart(2,"0")}
-           </div>
+            <Typography>
 
-           <div className="mode">{mode==="work"? "Work":"Break"}</div>
-           
+                    <div className="timer">
+                        {Math.floor( timeRemaining / 60 )}:{(timeRemaining % 60).toString().padStart(2,"0")}
+                    </div>
+
+                    <div className="mode">{mode==="code"? "Code":"Break"}</div>
+            </Typography>
+            <Button 
+                variant="contained"
+                onClick={startTime}
+                >Start</Button>
+            
+            <Button
+                variant="contained"
+                onClick={pauseTimer}
+            >Pause</Button>
+
+            <Button
+                variant="contained"
+                onClick={resetTimer}
+                >Reset</Button>
+
         </div>
+
     </>
   )
 }
