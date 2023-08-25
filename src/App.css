@@ -7,6 +7,10 @@
 .pomodoro{
   color: rgb(226, 237, 238);
 }
+
+.codeTimer{
+  color: rgb(226, 237, 238);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

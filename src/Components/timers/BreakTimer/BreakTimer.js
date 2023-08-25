@@ -49,7 +49,13 @@ const BreakTimer = () => {
   return (
     <>
         <div className="codeTimer">   
-            <Typography>
+            <Typography 
+                sx={{
+                    mt: 2,
+                    mb: 3,
+                    fontFamily: "monospace",
+                    fontSize: "8em"
+                }}>
 
                     <div className="timer">
                         {Math.floor( timeRemaining / 60 )}:{(timeRemaining % 60).toString().padStart(2,"0")}
