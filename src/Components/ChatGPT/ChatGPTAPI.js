@@ -1,6 +1,6 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 
-const makeOpenAiRequest =async(content)=>{
+ export default async function makeOpenAiRequest (content){
     const key = process.env.API_KEY;
     const org = process.env.REACT_APP_OPENAI_ORG
     const url = "https://api.openai.com/v1/chat/completions";
@@ -49,6 +49,7 @@ export const OpenAI=()=>{
                 <input value={prompt} onChange={(e)=> setPrompt (e.target.value)}/>
                 <div>{chat}</div>
             </label>
+            <button onClick={makeFetchHappen}/>
         </>
     )
 }
