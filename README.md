@@ -80,3 +80,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     Tomorrow, I will spend some time reading through the documentation and spend some time applying that code as to this feature is apart of my MVP.
 
     After a little bit of time I will move forward and begin working on my next feature, The white-boarding will be done and I will start working on that feature. 
+
+## Sept 6
+
+Yesterday I did flesh out a few ideas as to what I figured what would get the chatGPT api to 
