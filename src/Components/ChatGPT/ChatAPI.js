@@ -1,61 +1,57 @@
-// import { useCallback, useState } from "react";
-const { Configuration, OpenAIApi } = require("openai");
+import React, { useState } from "react";
 
+const MyChatComponent = () => {
+  const [userInput, setUserInput] = useState("");
+  const [apiResponse, setApiResponse] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
+  const makeApiCall = async () => {
+    setIsLoading(true);
 
-export const OpenAI=()=>{
+    try {
+      const response = await fetch("API_ENDPOINT", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer YOUR_API_KEY",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ input: userInput }),
+      });
 
-const promptExamples = { 
-    1:"I am trying to figure out how to solve this bug."
-}
+      if (!response.ok) {
+        throw new Error("API request failed");
+      }
 
-const configuration = new Configuration({
-    apiKey: process.env.API_KEY
-});
-
-const openai = new OpenAIApi(configuration);
-
-async function completion (prompt){
-    try{
-        const response = await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
-
-            messages:[{ role: "system", content: 'You are a debugger that is going to help the dev out with whatever error they have'
-            }
-        ]
-
-        })
-        const message = response.data.choices[0].message.content;
-        return message;
-    } catch (error){
-        throw new Error(error.message);
+      const data = await response.json();
+      setApiResponse(data.response);
+    } catch (error) {
+      console.error("API Error:", error);
+      setApiResponse("An error occurred while fetching the response.");
+    } finally {
+      setIsLoading(false);
     }
-}
+  };
 
-    const handleApi = async (id) =>{
-        try{
-            console.log("Helping with debugging");
-            const response = await completion(id);
-            console.log(response);
-            return response;
-        } catch(error){
-            throw error;
-        }
-    }
+  return (
+    <div>
+      <input
+        type="text"
+        value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
+        placeholder="Enter your message"
+      />
+      <button onClick={makeApiCall}>Submit</button>
 
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div>
+          <p>User Input: {userInput}</p>
+          <p>API Response: {apiResponse}</p>
+        </div>
+      )}
+    </div>
+  );
+};
 
-
-
-
-    return(
-        <>
-            <h3>Chat feature</h3>
-            <label>
-                Here to help you debugg
-                <input value={prompt} onChange={(e)=> setPrompt(e.target.value)}/>
-                <div>{chat}</div>
-            </label>
-            <button onClick={makeFetchHappen}/>
-        </>
-    )
-}
+export default MyChatComponent;
