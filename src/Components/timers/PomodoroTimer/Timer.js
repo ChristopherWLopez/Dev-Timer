@@ -43,7 +43,7 @@ import React, { useState, useEffect } from 'react'
         setTimeRemaining(25*60);
     }
   return (
-    <>
+    
         <div className="pomodoro">
             <Typography 
                 sx={{
@@ -73,7 +73,7 @@ import React, { useState, useEffect } from 'react'
             >Reset</Button>
 
         </div>
-        </>
+        
   );
  }
 
