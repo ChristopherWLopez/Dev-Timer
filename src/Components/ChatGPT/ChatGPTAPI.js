@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 
+
  export default async function makeOpenAiRequest (content){
 
         const key = process.env.API_KEY;
@@ -16,12 +17,14 @@ import { useCallback, useState } from "react";
         const response = await fetch(url, {
             method: "POST",
             headers: {
-                'Authoriztion' : `Bearer ${key}`,
-                'OpenAI-Organiztion': `${org}`,
-                'Content-Type': 'application/json'
+                "Authorization" : `Bearer ${key}`,
+                "OpenAI-Organiztion": `${org}`,
+                "Content-Type": 'application/json'
             },
             body: body,
         });
+
+        console.log("this my response " + response);
         
     
     if(response.ok){
