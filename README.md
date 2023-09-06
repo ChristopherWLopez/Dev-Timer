@@ -70,3 +70,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ## Changes to my README so I can check if my .env is no longer being pushed to my repo and I can stop fighting with making a new key. 
+
+## Sept 5
+
+   Log: I spent most of the day today trying to debug my chatGPT feature for this project. I am currently reading through the documentation to see if I can solve this situtation.
+
+    Blockers: I am tryin to get this API working, howevery I am getting a lot of errors, So for my MVP this is my main blocker. 
+
+    Tomorrow, I will spend some time reading through the documentation and spend some time applying that code as to this feature is apart of my MVP.
+
+    After a little bit of time I will move forward and begin working on my next feature, The white-boarding will be done and I will start working on that feature. 
