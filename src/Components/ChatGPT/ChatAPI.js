@@ -1,6 +1,6 @@
 // import { useCallback, useState } from "react";
 const { Configuration, OpenAIApi } = require("openai");
-require('dotenv').config();
+
 
 
 export const OpenAI=()=>{

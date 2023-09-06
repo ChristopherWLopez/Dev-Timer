@@ -47,7 +47,7 @@ const BreakTimer = () => {
     }
 
   return (
-    <>
+    
         <div className="codeTimer">   
             <Typography 
                 sx={{
@@ -80,7 +80,7 @@ const BreakTimer = () => {
 
         </div>
 
-    </>
+   
   )
 }
 
