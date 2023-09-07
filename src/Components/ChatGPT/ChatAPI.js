@@ -6,13 +6,17 @@ const MyChatComponent = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const makeApiCall = async () => {
+
+    const url = "https://api.openai.com/v1/chat/completions";
+    const API_KEY = process.env.API_KEY
+
     setIsLoading(true);
 
     try {
-      const response = await fetch("API_ENDPOINT", {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
-          "Authorization": "Bearer YOUR_API_KEY",
+          "Authorization": `Bearer: ${API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ input: userInput }),
