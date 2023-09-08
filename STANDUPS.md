@@ -25,3 +25,9 @@ From that point I will continue on and see what becomes of the day.
 ## 5:30
 
 I have spent time reading docs and understanding what It was I was doing wrong and I potentially saved myself some money because, I forgot that I should be making my api calls on the server side instead of the client side. So I feel I have a better understanding. However.... I do want to make sure that I am still moving forward with my MVP goals. So I will take this time to put in a pin in this feature and move on to the other feature I have in mind that will create a more fleshed out MVP. I will return to this AI portion tomorrow.
+
+## Today sept 7
+
+Today I spent some time getting used to socket.io as it has been a few months since I have last used it. While doing some research I also get my package.json set up and I started to set up the scaffolding for the `server` side of this project. I will have to do some factoring in this project and create a server side that will be able to make API calls so I do not expose my api key and such.
+
+Tomorrow, I will get my socket io server up and running and get working on this feature of this project.
