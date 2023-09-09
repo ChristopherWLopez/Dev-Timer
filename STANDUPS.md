@@ -31,3 +31,9 @@ I have spent time reading docs and understanding what It was I was doing wrong a
 Today I spent some time getting used to socket.io as it has been a few months since I have last used it. While doing some research I also get my package.json set up and I started to set up the scaffolding for the `server` side of this project. I will have to do some factoring in this project and create a server side that will be able to make API calls so I do not expose my api key and such.
 
 Tomorrow, I will get my socket io server up and running and get working on this feature of this project.
+
+## Sept 8
+
+Today I am working on my server side of my socet server and I will start hooking it up to my client side. I will asure that I have all the other dependences installed and make sure my end points are as they need to be.
+
+I dont forsee any major blockers at this point. I do understand that I have set aside my chatGPT feature for the time being in order to get some more work done on the app over all. 
