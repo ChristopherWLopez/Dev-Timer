@@ -36,4 +36,4 @@ Tomorrow, I will get my socket io server up and running and get working on this 
 
 Today I am working on my server side of my socet server and I will start hooking it up to my client side. I will asure that I have all the other dependences installed and make sure my end points are as they need to be.
 
-I dont forsee any major blockers at this point. I do understand that I have set aside my chatGPT feature for the time being in order to get some more work done on the app over all. 
+I dont forsee any major blockers at this point. I do understand that I have set aside my chatGPT feature for the time being in order to get some more work done on the app over all.
