@@ -41,3 +41,5 @@ Today I am working on my server side of my socet server and I will start hooking
 I dont forsee any major blockers at this point. I do understand that I have set aside my chatGPT feature for the time being in order to get some more work done on the app over all.
 
 ## checkout
+
+asdkfjhdskjfhsdkhfkshflashfsdahfldshfajdhfkljsh just checking if I can get this to push to my github repo
