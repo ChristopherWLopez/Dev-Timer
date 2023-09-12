@@ -40,8 +40,6 @@ Today I am working on my server side of my socet server and I will start hooking
 
 I dont forsee any major blockers at this point. I do understand that I have set aside my chatGPT feature for the time being in order to get some more work done on the app over all.
 
-## checkout
+## Sep 12
 
-asdkfjhdskjfhsdkhfkshflashfsdahfldshfajdhfkljsh just checking if I can get this to push to my github repo
-
-asdkfhaksdfhkdshfkjdsahkfjhdsafhdsfhkajsdh
+Today I will work on getting my server up and running and make sure that I can Have both my front end and back end can communicate to one another. As of right now I do not have any blockers and forsee any blockers.
