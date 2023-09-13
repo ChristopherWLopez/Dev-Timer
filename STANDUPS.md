@@ -43,3 +43,5 @@ I dont forsee any major blockers at this point. I do understand that I have set 
 ## Sep 12
 
 Today I will work on getting my server up and running and make sure that I can Have both my front end and back end can communicate to one another. As of right now I do not have any blockers and forsee any blockers.
+
+Today I spent alot of time trying to debug an issue that I had. I was not having a good go at having my server connect with my client. I am now able to get them to hook up and I was able to get my socket.id to display in my server, so that blocker was over come. I will not be building out my routes and that should be a smooth process. I also had to set aside my AI for the time being and comment out those components because they were throwing errors.
