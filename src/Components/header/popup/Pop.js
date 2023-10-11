@@ -1,6 +1,7 @@
 import React,{ useState} from 'react'
+import Modal from "../modal/Modal.js";
 
-const Pop = () => {
+const Pop = ({ isOpen, isClose }) => {
 
     const [input, setSetUserInput]=useState('');
 
