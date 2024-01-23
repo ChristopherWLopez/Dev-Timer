@@ -4,11 +4,11 @@ import React, { useEffect, useState} from "react";
 
 const BreakTimer = () => {
 
-    
 
-    const [ timeRemaining, setTimeRemaining ] = useState(60*60);
-    const [isRunning, setIsRunning] = useState(false);
-    const [mode, setMode] = useState("code");
+    const [ timeRemaining, setTimeRemaining ] = useState(60*10);
+    const [ isRunning, setIsRunning ] = useState(false);
+    const [ mode, setMode ] = useState("code");
+
 
     useEffect(()=>{
 
@@ -58,7 +58,7 @@ const BreakTimer = () => {
                 }}>
 
                     <div className="timer">
-                        {Math.floor( timeRemaining / 60 )}:{(timeRemaining % 60).toString().padStart(2,"0")}
+                        {Math.floor( timeRemaining / 60 )}:{ (timeRemaining % 60).toString().padStart(2,"0")}
                     </div>
 
                     <div className="mode">{mode==="code"? "Code":"Break"}</div>
